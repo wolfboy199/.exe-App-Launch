@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Web Launcher — wolfattack.us</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Web Launcher (wolfattack.us)</h1>
+    <p>Client-side only. Drop files to add to your workspace. Click protocol links to open installed apps (e.g., discord://).</p>
+  </header>
+
+  <main>
+    <section id="controls">
+      <div class="left">
+        <input id="fileInput" type="file" multiple />
+        <button id="clearWorkspace">Clear Workspace</button>
+      </div>
+      <div class="right">
+        <input id="protocolInput" placeholder="Enter protocol URL (e.g. discord://)" />
+        <button id="openProtocol">Open</button>
+      </div>
+    </section>
+
+    <section id="dropArea" class="drop">
+      <p>Drag & drop files here (images, text, audio, video, .zip). .exe files cannot be executed from the browser.</p>
+    </section>
+
+    <section id="workspace">
+      <h2>Workspace</h2>
+      <div id="tiles" class="tiles"></div>
+    </section>
+
+    <section id="log">
+      <h3>Activity</h3>
+      <ul id="activity"></ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
